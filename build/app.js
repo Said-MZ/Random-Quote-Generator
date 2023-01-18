@@ -6,8 +6,8 @@ console.log(btn,quote,person)
 const quotes = [
     {quote:'"Any person capable of angering you becomes your master"',
      person: 'Epictetus'},
-    {quote:'You may only need one wife, but if God wants you to have four, Don\'t question it..',
-     person: 'Somone'},
+    {quote:'“Java is to Javascript what car is to Carpet.”',
+     person: 'Chris Heilmann'},
     {quote:'“No man is free who cannot control himself.”',
      person: 'Pythagoras'},
     {quote:'“If I had an hour to solve a problem I\'d spend 55 minutes thinking about the problem and five minutes thinking about solutions.”',
@@ -20,6 +20,10 @@ const quotes = [
      person: 'Martin Fowler'},
     {quote:'"What one man can do, another can do."',
      person: 'Charles Morse '},
+    {quote:'“Code is like humor. When you have to explain it, it\'s bad.”',
+     person: 'Cory House'},
+    {quote:'“If I only had an hour to chop down a tree, I would spend the first 45 minutes sharpening my axe.”',
+     person: 'Abraham Lincoln'},
 ];
 
 btn.addEventListener("click",function(){
