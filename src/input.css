@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.radial-blue{
+    background: radial-gradient(lightyellow, skyblue);
+}
+body{
+    background-image: url(/img/Contour\ Line.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
+button {
+    --color: #265d91;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+   }
+   
+   button::before, button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 500ms ease;
+   }
+   
+   button::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   button:hover::before, button:hover::after {
+    height: 220px;
+    width: 220px;
+   }
+   
+   button:hover {
+    color: rgb(10, 25, 30);
+   }
+   
+   button:active {
+    filter: brightness(.8);
+   }
+   #quoteContainer cite
+   {
+       margin-bottom: 1em;
+   }
+   @media (prefers-color-scheme: light) {
+    body{
+        background-image: url(/img/Contour\ Line\ \(1\).svg);
+    }
+
+button {
+    --color: #bbb;
+    color: var(--color);
+   }
+   
+   button::before, button::after {
+    background-color: var(--color);
+    color: whitesmoke;
+   }
+   
+   
+   button:hover {
+      color: whitesmoke;
+   }
+   
+
+  }
+@media only screen and (max-width: 600px) {
+
+    footer {
+        padding-top: .0em !important;
+    }
+    #author
+    {
+        margin: auto;
+        margin-bottom: 1em;
+    }
+    #quoteContainer{
+
+        display: flex;
+        flex-direction: column;
+
+        width: 60vw;
+    }
+    #quoteContainer svg{
+        margin: auto auto auto -.1em;
+    }
+    #quoteContainer p
+    {
+        font-size: 1em;
+    }
+    #quoteContainer cite
+    {
+        font-size: .75em;
+        margin-bottom: 1em;
+    }
+    #quoteContainer blockquote
+    {
+        text-align: center;
+        width: 80%;
+    }
+    #quoteContainer button
+    {
+        font-size: .75em;
+    }
+}
